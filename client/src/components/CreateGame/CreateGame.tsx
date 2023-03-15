@@ -194,7 +194,7 @@ const CreateGame = () => {
                 name="genres"
                 options={genresOptions}
                 component={CustomSelect}
-                placeholder="Select a Genres"
+                placeholder="Select Genres"
                 isMulti={true}
                 validate={(value: string) => {
                   if (!value?.length) return "Please fill in this field.";

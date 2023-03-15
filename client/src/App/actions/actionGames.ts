@@ -15,7 +15,7 @@ import {
 export function getAllGames() {
   return async function (dispatch: any) {
     try {
-      const res = await axios("http://localhost:3001/games");
+      const res = await axios("/games");
       return dispatch(getAllGamesReducer(res.data));
     } catch (error) {
       console.log(error);
@@ -38,7 +38,7 @@ export function setCurrentPage(payload: number) {
 export function getDetails(id: string | undefined) {
   return async function (dispatch: any) {
     try {
-      const res = await axios("http://localhost:3001/games/" + id);
+      const res = await axios("/games/" + id);
       return dispatch(getDetailsReducer(res.data));
     } catch (error) {
       console.log(error);
@@ -55,7 +55,7 @@ export function cleanUpDetail() {
 export function getGameByName(name: string | undefined) {
   return async function (dispatch: any) {
     try {
-      const res = await axios("http://localhost:3001/games?name=" + name);
+      const res = await axios("/games?name=" + name);
       return dispatch(getGameByNameReducer(res.data));
     } catch (error) {
       console.log(error);
@@ -92,7 +92,7 @@ export function postGame(data: any) {
   return function (dispatch: any) {
     return new Promise(function (resolve, reject) {
       axios
-        .post("http://localhost:3001/games", data)
+        .post("/games", data)
         .then((res) => {
           resolve(res);
           dispatch(postGameReducer(data));

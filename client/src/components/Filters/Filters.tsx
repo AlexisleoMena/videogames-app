@@ -51,7 +51,7 @@ const Filters = () => {
   useEffect(() => {
     (async () => {
       try {
-        const { data } = await axios("http://localhost:3001/genres");
+        const { data } = await axios("/genres");
         setGenres(data);
       } catch (error) {
         console.log(error);
