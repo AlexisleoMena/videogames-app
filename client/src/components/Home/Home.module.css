@@ -1,0 +1,56 @@
+.container {
+  background: url(../../assets/images/background.jpg);
+  background-position: center;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 140px;
+  min-height: 50vh;
+}
+
+.no_results {
+  color: #fff;
+  font-family: 'Concert One';
+  font-size: 2rem;
+}
+
+/* barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 6px;     /* Tamaño del scroll en vertical */
+  height: 6px;    /* Tamaño del scroll en horizontal */
+}
+/* flechas
+::-webkit-scrollbar-button {
+} */
+/* controlador de desplazamiento */
+::-webkit-scrollbar-thumb {
+  background: rgb(94, 255, 13);
+  /* border-radius: 5px; */
+}
+::-webkit-scrollbar-thumb:hover {
+  background: black;
+}
+/* Cambiamos el fondo cuando esté en active */
+::-webkit-scrollbar-thumb:active {
+  background-color: #fff;
+}
+
+/* barra de progreso */
+::-webkit-scrollbar-track {
+  border: 1px solid  rgba(94, 255, 13, 0.171);
+}
+/* barra de progreso no cubierta */
+::-webkit-scrollbar-track-piece {
+  background-color: rgb(21, 19, 19);
+}

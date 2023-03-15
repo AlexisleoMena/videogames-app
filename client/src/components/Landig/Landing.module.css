@@ -1,0 +1,202 @@
+.container {
+  background: url(../../assets/images/BackgroundLanding.jpg);
+  background-position: center;
+  background-repeat: no-repeat; /* No se repetirá */
+  background-size: cover; /* Imagen al 100% del ancho */
+  background-attachment: fixed; /* Posicion fija para la imagen */
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Concert One';
+  text-transform: uppercase;
+  position: relative;
+}
+
+.container:before {
+	content:'';
+	position: absolute;
+  top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.8);
+}
+
+
+.neonText {
+  z-index: 3;
+  /* animation: flicker 3s infinite alternate; */
+  color: #fff;
+}
+.container > h1 {
+  font-size: 5rem;
+  margin: 0;
+  text-align: center;
+}
+
+/* @keyframes flicker {
+    
+  0%, 18%, 20%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 1px #fff,
+      0 0 2px #fff,
+      0 0 2px #fff,
+      0 0 3px #fff,
+      0 0 4px rgb(94, 255, 13),
+      0 0 7px rgb(94, 255, 13),
+      0 0 12px rgb(94, 255, 13),
+      0 0 16px rgb(94, 255, 13),
+      0 0 20px rgb(94, 255, 13);
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+} */
+
+
+/* Additional styling */
+  
+
+
+.btn_container {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.btn_container button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: 1.3em;
+  font-family: "Concert One";
+}
+
+.learn-more {
+  width: 10rem;
+  height: auto;
+}
+
+.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgb(21, 19, 19);
+  border: 0.02px solid rgb(255, 255, 255);
+  border-radius: 1.625rem;
+}
+
+.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: -0.29rem;
+  left: -0.29rem;
+  right: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.btn_container button:hover .circle {
+  width: 100%;
+}
+
+.btn_container button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+.btn_container button:hover .button-text {
+  color: #fff;
+}
+
+.title_container {
+  margin-top: 30vh;
+  font-family: "Concert One";
+  font-size: 10vw;
+  letter-spacing: 0.7rem;
+  color: #fff;
+  -webkit-text-stroke: 0.7px rgb(71, 70, 70);
+  text-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6);
+  max-width: 40ch;
+  text-align: center;
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+.title_container span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+}
+
+.title_container span:nth-child(1) {
+  animation: fade-in 0.9s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.title_container span:nth-child(2) {
+  animation: fade-in 0.9s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+.title_container span:nth-child(3) {
+  animation: fade-in 0.9s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}

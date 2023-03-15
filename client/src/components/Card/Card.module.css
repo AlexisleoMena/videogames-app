@@ -1,0 +1,46 @@
+.card_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 13px;
+  height: 17em;
+  width: 22em;
+  margin: 1em 1.5em 3em 1.5em;
+  background-color: rgb(21, 19, 19);
+  border: 1px solid  rgba(94, 255, 13, 0.171);
+  border-radius: 0 0 1em 1em;
+  box-shadow: 3px 4px 21px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 3px 4px 21px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 4px 21px 0px rgba(0,0,0,0.75);
+  font-family: 'Concert One';
+  text-transform: uppercase;
+  color: #fff;
+}
+.img {
+  height: 10.5em;
+  width: 100%;
+  object-fit: cover;
+}
+.info_container {
+  position: relative;
+  height: 6.5em;
+  padding: .3em .5em .3em .5em;
+}
+.info_container > h2 {
+  position: absolute;
+  max-width: 87%;
+  top: .5em;
+  left: .5em;
+  line-height: 1;
+  margin: 0;
+}
+.info_container > p {
+  position: absolute;
+  margin: 0;
+  right: 1em;
+  bottom: .5em;
+  line-height: .9;
+  text-align: end;
+  text-align-last: end;
+
+}

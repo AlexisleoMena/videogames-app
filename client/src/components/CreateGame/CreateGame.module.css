@@ -1,0 +1,195 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url(../../assets/images/background.jpg);
+  background-position: center;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  font-size: 12px;
+  color: #fff;
+  font-family: "Concert One";
+  text-transform: uppercase;
+}
+.btn__back {
+  align-self: flex-start;
+  margin: 1em 0 1em 2em;
+  width: 3em;
+  padding: .2em;
+  font-weight: 800;
+  border-radius: .4em;
+  background-color:  rgb(64, 178, 8);
+  cursor: pointer;
+  color: #ffff;
+}
+
+.title {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.form_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, auto);
+  justify-items: center;
+  grid-template-areas:
+    "item_name item_released"
+    "item_platforms item_genres"
+    "item_rating item_image"
+    "item_description item_image"
+    "item_description item_image"
+    "item_buttons item_buttons";
+  gap: 2em;
+  padding: 3rem;
+  border-radius: 0.5rem;
+  background-color: #151313;
+  border: 1px solid rgb(64, 178, 8);;
+  margin: 3em;
+}
+
+.item_name,
+.item_released,
+.item_platforms,
+.item_genres,
+.item_rating,
+.item_image,
+.item_description,
+.item_buttons {
+  display: flex;
+  font-size: 1rem;
+  flex-direction: column;
+  padding: 1em 0 1em 0;
+  width: 19em;
+  height: max-content;
+}
+.item_name {
+  grid-area: item_name;
+}
+.item_released {
+  grid-area: item_released;
+}
+.item_platforms {
+  grid-area: item_platforms;
+}
+.item_genres {
+  grid-area: item_genres;
+}
+.item_rating {
+  grid-area: item_rating;
+}
+.item_image {
+  grid-area: item_image;
+}
+.item_description {
+  grid-area: item_description;
+}
+.item_buttons {
+  grid-area: item_buttons;
+}
+
+.name_property {
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.3em;
+}
+
+.field {
+  outline-color: white;
+  text-indent: 10px;
+  border-radius: 5px;
+  border: 1px solid white;
+  min-height: 2.3rem;
+  font-size: 1rem;
+  font-family: "Concert One";
+  text-transform: uppercase;
+}
+.field::placeholder {
+  color: #06065051;
+}
+.field_error {
+  color: #eb1b1b;
+}
+.item_image {
+  height: 100%;
+}
+.image_container {
+  margin-top: 1em;
+  max-width: 100%;
+  max-height: 100%;
+  padding: .2rem;
+  border-radius: 0.5rem;
+  background-color: #151313;
+  border: 1px solid white;
+}
+
+.image {
+  height: 11em;
+  width: 100%;
+  object-fit: scale-down;
+}
+
+.item_description > .field {
+  height: 6rem;
+  max-height: 6rem;
+  max-width: 100%;
+}
+
+.item_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1.5em;
+}
+.submit_btn {
+  flex: auto;
+  height: 2.5em;
+  width: 10em;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  border: 1px solid #fff;
+  font-size: 17px;
+  font-family: "Concert One";
+
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: rgb(64, 178, 8);
+}
+.reset_btn {
+  margin-left: 1rem;
+  height: 2.5em;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  border: 1px solid #fff;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #eb1b1b;
+  width: 20%;
+}
+button:focus {
+  box-shadow: 0 0 0 3px rgba(52, 144, 220, 0.5);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed !important;
+}
+@media screen and (max-width: 992px) {
+  .form_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    border-radius: 0.5rem;
+    background-color: #151313;
+    border: 1px solid rgb(64, 178, 8);;
+    margin: 3em;
+  }
+}

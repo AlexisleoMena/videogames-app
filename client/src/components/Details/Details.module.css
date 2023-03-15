@@ -1,0 +1,76 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  Background-Position: center;
+  Background-Size: cover;
+  Background-Repeat: no-repeat;
+  font-size: 14px;
+  color: #fff;
+}
+
+.btn__back {
+  align-self: flex-start;
+  margin: 1em 0 1em 2em;
+  width: 3em;
+  padding: .2em;
+  font-weight: 800;
+  border-radius: .4em;
+  background-color:  rgb(64, 178, 8);
+  cursor: pointer;
+  color: #ffff;
+}
+.btn__back:active {
+  transform: scale(0.88);
+  background-color: rgb(94, 255, 13);
+}
+.btn__back:hover {
+  background-color: rgb(94, 255, 13);
+}
+
+.contents {
+
+  margin: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 90vw;
+  min-height: 70vh;
+  padding: 2em;
+  background-color: rgba(21, 19, 19, 0.785);
+}
+.contents > div > p {
+  text-indent: .4em;
+}
+.contents > div > h1 {
+  padding-left: .5em;
+}
+.contents > ul {
+  padding: 0;
+  list-style: none;
+}
+.contents > ul >li {
+  text-transform: capitalize;
+}
+.contents > ul >li > strong {
+  margin: 0;
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .container {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .container {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container {
+    font-size: 17px;
+  }
+}
