@@ -141,9 +141,7 @@ const videogamesSlice = createSlice({
       state.loading = false;
       state.currentPage = 1;
     },
-    postGameReducer: (state, action) => {
-      state.allGames.push(action.payload);
-    }
+    postGameReducer: (state, action) => state
   }
 })
 

@@ -8,7 +8,7 @@ import Modal from "../Modal/Modal";
 import PreviewImage from "./PreviewImage";
 import CustomSelect from "./CustomSelect";
 import FieldImage from "./FieldImage";
-import { deepCleanUp, postGame, getAllGames } from "../../App/actions/actionGames";
+import { postGame, getAllGames, setLoading } from "../../App/actions/actionGames";
 import { IoRefreshOutline } from "react-icons/io5";
 import styles from "./CreateGame.module.css";
 import LoadingBar from 'react-top-loading-bar'
@@ -86,7 +86,8 @@ const CreateGame = () => {
       actions.setSubmitting(false);
       actions.resetForm();
       // (document.getElementById("input_image") as HTMLInputElement).value = ""
-      dispatch(deepCleanUp());
+      dispatch(getAllGames());
+      dispatch(setLoading(true));
     } catch (error: any) {
       console.log("error", error.message);
     }
@@ -263,8 +264,8 @@ const CreateGame = () => {
                   if (value[0] === " ") return "Please remove leading spaces.";
                   if (value[value.length - 1] === " ")
                     return "Please remove trailing spaces.";
-                  if (!/^[a-zA-Z0-9\u00C0-\u017F" "]{0,500}$/.test(value))
-                    return "Description must contain 0 to 500 alphanumeric characters.";
+                  if (value.length > 2000)
+                    return "Description must contain 0 to 2000 alphanumeric characters.";
                   return;
                 }}
               />

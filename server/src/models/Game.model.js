@@ -17,7 +17,7 @@ module.exports = (sequelize) => {
       }
     },
     description: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
       validate: {
         notEmpty: true
@@ -35,7 +35,7 @@ module.exports = (sequelize) => {
     rating: {
       type: DataTypes.FLOAT,
       set(value) {
-        if(!value.length) {
+        if(typeof value.rating === "string" && !value.length) {
           return this.setDataValue('rating', 1.00);
         }
         this.setDataValue('rating', parseFloat(value));
