@@ -42,7 +42,7 @@
     "item_description item_image"
     "item_buttons item_buttons";
   gap: 2em;
-  padding: 3rem;
+  padding: 1.5rem 3rem;
   border-radius: 0.5rem;
   background-color: #151313;
   border: 1px solid rgb(64, 178, 8);;
