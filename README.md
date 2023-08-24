@@ -1,6 +1,6 @@
 # Videojuegos App
 
-Esta es una aplicación web (SPA) centrada en el mundo de los videojuegos, aprovechando herramientas como React, Redux, Express, Sequelize y Postgres para brindarte una experiencia fluida y amigable.
+Esta es una aplicación web (SPA) centrada en el mundo de los videojuegos, aprovechando herramientas como React, Redux, Express, Sequelize y Postgres para brindar una experiencia fluida y amigable.
 
 ## Frontend
 
@@ -10,19 +10,19 @@ En el desarrollo Frontend de la aplicación, se emplearon tecnologías como Reac
 
 A continuación, te presento algunas capturas de pantalla que te dan una idea visual de las características más destacadas de la aplicación:
 
-**Página de Inicio:**
+**Landing Page:**
 ![Página de Inicio](./captures/Landing-page.jpg)
 
-**Inicio:**
+**Home:**
 ![Inicio](./captures/Home.jpg)
 
 **Filtros:**
 ![Filtros](./captures/Filters.jpg)
 
-**Detalles del Juego:**
+**Detalles del Videojuego:**
 ![Detalles del Juego](./captures/Details-game.jpg)
 
-**Crear Juego:**
+**Crear card de un Videojuego:**
 ![Crear Juego](./captures/Create-game.jpg)
 
 ### Iniciar la Aplicación desde el lado del Frontend:
